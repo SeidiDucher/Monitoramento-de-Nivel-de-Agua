@@ -6,7 +6,7 @@ Este projeto descreve a implementação de um sistema de medição de nível de 
 
 Para replicar este projeto, são necessários os seguintes componentes:
 
-### 1. Sensor de Nível Hidrostático (Tipo Imersão)
+### 1. Sensor de Nível Hidrostático 
 Diferente dos sensores ultrassônicos, este sensor mede a pressão exercida pela coluna de água.
 
 * **Função:** Converte a pressão mecânica em um sinal elétrico analógico proporcional (corrente).
@@ -19,7 +19,7 @@ Como o ESP8266 não consegue ler corrente diretamente, este módulo é a ponte n
 * **Função:** Converte o sinal de **4-20mA** do sensor em uma faixa de tensão (geralmente 0-3.3V ou 0-5V) ajustável via trimpot.
 * **Importância:** Garante que o sinal de corrente seja traduzido para uma voltagem que o pino ADC do microcontrolador suporte.
 
-### 3. Microcontrolador ESP8266 (NodeMCU/Wemos D1 Mini)
+### 3. Microcontrolador ESP8266 (NodeMCU)
 O "cérebro" do projeto.
 
 * **Função:** Processa o sinal analógico lido no pino **A0**, converte os valores brutos em unidades de medida (metros ou porcentagem) e envia os dados via Wi-Fi.
@@ -34,4 +34,5 @@ Sensores industriais e módulos conversores geralmente operam em 12V ou 24V, enq
 ---
 
 ## 🔌 Esquema de Conexão (Resumo)
-*(Espaço para descrição do diagrama ou imagem das conexões)*
+<img width="881" height="506" alt="image" src="https://github.com/user-attachments/assets/6f660019-c365-4cf5-9f0f-148ce6eb7e9d" />
+
